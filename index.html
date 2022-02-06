@@ -23,9 +23,175 @@ Known Issues:
 blah, blah, blah, blah
 -->
 
-   <head> 
-      
-	   PUT YOUR OLD CODE IN HERE
-	   
-   </body>
+  <head> <!--This code contains the title, style sheets, and makes it so that this code can both run as a mobile app and as a website.-->
+      <title>Hello World</title>  
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="apple-mobile-web-app-capable" content="yes"> <!--This is the part that makes it mobile app capable-->
+      <link rel="stylesheet" href="w3.css">
+      <link rel="stylesheet" href="w3-colors-flat.css">
+   </head> 
+
+<!--JAVA CODE-->
+<script> <!--This code contains the functions and variables that tally up the allergy vs. cold symptoms. It also contains the math that calculates the percent likelihood of allergies or a cold.-->
+        var allergy_count = 0; <!--This variable counts the number of symptoms that point to allergies being the cause-->
+        var cold_count = 0; <!--This variable counts the number of symptoms that point to a cold being the cause-->
+
+
+        function allergyAdd(){ <!--This function counts the number of times a symptom implying allergies is selected-->
+            allergy_count = allergy_count + 1; <!--the function adds one for every allergy symptom-->
+        }
+	
+        function coldAdd(){ <!--This function counts the number of times a symptom implying a cold is selected-->
+            cold_count = cold_count + 1; <!--the function adds one for every cold symptom-->
+        }
+	
+	function results_display(){ <!--This function shows the results of what the symptoms imply-->
+		var resultText = document.getElementById("resultspage"); <!--this will return an element with a numeric value. This code also references the id in the code of the results page-->
+		var allergyPercent = 100*(allergy_count/(allergy_count+cold_count)); <!--this calculates the percent of symptoms that indicate allergies-->
+		var coldPercent = 100*(cold_count/(allergy_count+cold_count)); <!--this calculates the percent of symptoms that indicate a cold-->
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold =" + coldPercent + "%"; <!--this displays the results with the specified text and a percentage of the likelihood of allergies vs. cold-->
+	}
+  </script>
+
+<!--HTML CODE-->
+<!--This code defines and creates what each page will look like-->
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<!--HOME SCREEN-->
+<body> 
+<div id="header" class="w3-container w3-flat-carrot"> <!--This makes the heading orange--->
+	<h1>Cold or Allergies?</h1> <!--This is the heading of the home page-->
+</div>
+	
+<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on the home page-->
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p> <!--This text will be displayed on the home page-->
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a> <!--This codes for the "Get Started" button-->
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p> <!--This text will be displayed on the home page-->
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!--This text will be displayed on the home page-->
+
+<!--PAGE ONE-->
+
+<div class="page" id="one"> <!--This creates the first page-->
+	<div id="header" class="w3-container w3-flat-carrot"> <!--This makes the heading orange-->
+		<h1>Question 1</h1> <!--This is the heading of page one-->
+	</div>
+	
+    	<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on page one-->
+		<p>Are your eyes watery or itchy?</p> <!--This the question that will be displayed on page one. Code for "Question 1"-->
+		<a href = "#two"  onclick = "allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 1 and directs the code to proceed to page 2-->
+		<a href = "#two"  onclick = "coldAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 1 and directs the code to proceed to page 2-->
+	 </div>
+
+</div>										
+									    
+<!--PAGE 2-->
+
+<div class="page" id="two"> <!--This creates the second page-->
+	<div class="w3-container w3-flat-carrot"> <!--This makes the heading orange-->
+		<h1>Question 2</h1> <!--This is the heading of page two-->
+	</div>
+	
+	<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on page two-->
+		<p>Do you have a fever?</p> <!--This the question that will be displayed on page two. Code for "Question 2"-->
+		<a href = "#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 2 and directs the code to proceed to page 3-->
+		<a href = "#three"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 2 and directs the code to proceed to page 3-->
+	</div>
+</div>	
+
+<!--PAGE 3-->
+	
+<div class="page" id="three"> <!--This creates the third page-->
+	<div class="w3-container w3-flat-carrot"> <!--This makes the heading orange-->
+		<h1>Question 3</h1> <!--This is the heading of page three-->
+	</div>
+	
+	<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on page three-->
+		<p>Do you have a sore throat?</p> <!--This the question that will be displayed on page three. Code for "Question 3"-->
+		<a href = "#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 3 and directs the code to proceed to page 4-->
+		<a href = "#four"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 3 and directs the code to proceed to page 4-->
+	</div>
+</div>	
+
+<!--PAGE 4-->
+	
+<div class="page" id="four"> <!--This creates the fourth page-->
+	<div class="w3-container w3-flat-carrot"> <!--This makes the heading orange-->
+		<h1>Question 4</h1> <!--This is the heading of page four-->
+	</div>
+	
+	<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on page four-->
+		<p>Are your symptoms seasonal or chronic?</p> <!--This the question that will be displayed on page four. Code for "Question 4"-->
+		<a href = "#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 4 and directs the code to proceed to page 5-->
+		<a href = "#five"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 4 and directs the code to proceed to page 5-->
+	</div>
+</div>	
+
+<!--PAGE 5-->
+	
+<div class="page" id="five"> <!--This creates the fifth page-->
+	<div class="w3-container w3-flat-carrot"> <!--This makes the heading orange-->
+		<h1>Question 5</h1> <!--This is the heading of page five-->
+	</div>
+	
+	<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on page five-->
+		<p>Did your symptoms develop fast?</p> <!--This the question that will be displayed on page five. Code for "Question 5"-->
+		<a href = "#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 5 and directs the code to proceed to page 6-->
+		<a href = "#six"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 5 and directs the code to proceed to page 6-->
+	</div>
+</div>	
+
+<!--PAGE 6-->
+	
+<div class="page" id="six"> <!--This creates the sixth page-->
+	<div class="w3-container w3-flat-carrot"> <!--This makes the heading orange-->
+		<h1>Question 6</h1> <!--This is the heading of page six-->
+	</div>
+	
+	<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on page six-->
+		<p>Does your body ache?</p> <!--This the question that will be displayed on page six. Code for "Question 6"-->
+		<a href = "#results"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 6 and directs the code to proceed to the results page-->
+		<a href = "#results"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 6 and directs the code to proceed to the results page-->
+	</div>
+</div>	
+
+<!--RESULTS-->
+	
+<div class="page" id="results"> <!--This creates the results page-->
+	<div class="w3-container w3-flat-carrot"> <!--This makes the heading orange-->
+		<h1>Results</h1> <!--This is the heading of the results page-->
+	</div>
+		<p id="resultspage"> </p> <!--This references the Java code above to calculate and display the results when the button below is clicked-->
+		<a onclick="results_display();" class="w3-btn w3-black"> Results</a> <!--This codes for the black "results" button that will trigger the Java function above-->
+	</div>
+</div>	
+
+
+<footer class="w3-bottom w3-container w3-flat-carrot"> <!--This makes the footer orange-->
+	<p>DIY!</p> <!--This is the footer of the results page-->
+</footer>
+
+</body>
 </html>
