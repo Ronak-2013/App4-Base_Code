@@ -79,7 +79,7 @@ blah, blah, blah, blah
 
 <!--HOME SCREEN-->
 <body> 
-<div id="header" class="w3-container w3-flat-dodgerblue"> <!--This makes the heading orange--->
+<div id="header" class="w3-container w3-flat-carrot"> <!--This makes the heading orange--->
 	<h1>Introvert or Extrovert?</h1> <!--This is the heading of the home page-->
 </div>
 	
@@ -90,7 +90,7 @@ blah, blah, blah, blah
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p> <!--This text will be displayed on the home page-->
  	
-	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p> <!--This text will be displayed on the home page-->
+	<p>THIS CODE SHOULD NOT BE USED TO DETERMINE YOUR PERSONALITY.</p> <!--This text will be displayed on the home page-->
 
 <!--PAGE ONE-->
 
@@ -100,9 +100,9 @@ blah, blah, blah, blah
 	</div>
 	
     	<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on page one-->
-		<p>Are your eyes watery or itchy?</p> <!--This the question that will be displayed on page one. Code for "Question 1"-->
-		<a href = "#two"  onclick = "allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 1 and directs the code to proceed to page 2-->
-		<a href = "#two"  onclick = "coldAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 1 and directs the code to proceed to page 2-->
+		<p>Do you recharge your social battery alone?</p> <!--This the question that will be displayed on page one. Code for "Question 1"-->
+		<a href = "#two"  onclick = "introvertAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 1 and directs the code to proceed to page 2-->
+		<a href = "#two"  onclick = "extrovertAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 1 and directs the code to proceed to page 2-->
 	 </div>
 
 </div>										
@@ -115,9 +115,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on page two-->
-		<p>Do you have a fever?</p> <!--This the question that will be displayed on page two. Code for "Question 2"-->
-		<a href = "#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 2 and directs the code to proceed to page 3-->
-		<a href = "#three"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 2 and directs the code to proceed to page 3-->
+		<p>Do you enjoy being the center of attention?</p> <!--This the question that will be displayed on page two. Code for "Question 2"-->
+		<a href = "#three"  onclick="extrovertAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 2 and directs the code to proceed to page 3-->
+		<a href = "#three"  onclick="introvertAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 2 and directs the code to proceed to page 3-->
 	</div>
 </div>	
 
@@ -129,9 +129,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on page three-->
-		<p>Do you have a sore throat?</p> <!--This the question that will be displayed on page three. Code for "Question 3"-->
-		<a href = "#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 3 and directs the code to proceed to page 4-->
-		<a href = "#four"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 3 and directs the code to proceed to page 4-->
+		<p>Do you find talking to new people awkward?</p> <!--This the question that will be displayed on page three. Code for "Question 3"-->
+		<a href = "#four"  onclick="introvertAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 3 and directs the code to proceed to page 4-->
+		<a href = "#four"  onclick="extrovertAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 3 and directs the code to proceed to page 4-->
 	</div>
 </div>	
 
@@ -143,9 +143,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on page four-->
-		<p>Are your symptoms seasonal or chronic?</p> <!--This the question that will be displayed on page four. Code for "Question 4"-->
-		<a href = "#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 4 and directs the code to proceed to page 5-->
-		<a href = "#five"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 4 and directs the code to proceed to page 5-->
+		<p>Do you enjoy attending big social gatherings?</p> <!--This the question that will be displayed on page four. Code for "Question 4"-->
+		<a href = "#five"  onclick="extrovertAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 4 and directs the code to proceed to page 5-->
+		<a href = "#five"  onclick="introvertAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 4 and directs the code to proceed to page 5-->
 	</div>
 </div>	
 
@@ -157,9 +157,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on page five-->
-		<p>Did your symptoms develop fast?</p> <!--This the question that will be displayed on page five. Code for "Question 5"-->
-		<a href = "#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 5 and directs the code to proceed to page 6-->
-		<a href = "#six"  onclick="coldAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 5 and directs the code to proceed to page 6-->
+		<p>Would your friends describe you as outgoing?</p> <!--This the question that will be displayed on page five. Code for "Question 5"-->
+		<a href = "#six"  onclick="extrovertAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 5 and directs the code to proceed to page 6-->
+		<a href = "#six"  onclick="introvertAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 5 and directs the code to proceed to page 6-->
 	</div>
 </div>	
 
@@ -171,9 +171,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container"> <!--This codes for the text and buttons below the header on page six-->
-		<p>Does your body ache?</p> <!--This the question that will be displayed on page six. Code for "Question 6"-->
-		<a href = "#results"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 6 and directs the code to proceed to the results page-->
-		<a href = "#results"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 6 and directs the code to proceed to the results page-->
+		<p>Are you more productive alone?</p> <!--This the question that will be displayed on page six. Code for "Question 6"-->
+		<a href = "#results"  onclick="introvertAdd();" class="w3-btn w3-black"> Yes</a> <!--This codes the black "yes" button to answer Question 6 and directs the code to proceed to the results page-->
+		<a href = "#results"  onclick="extrovertAdd();" class="w3-btn w3-black"> No</a> <!--This codes the black "no" button to answer Question 6 and directs the code to proceed to the results page-->
 	</div>
 </div>	
 
