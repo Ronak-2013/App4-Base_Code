@@ -33,23 +33,23 @@ blah, blah, blah, blah
 
 <!--JAVA CODE-->
 <script> <!--This code contains the functions and variables that tally up the allergy vs. cold symptoms. It also contains the math that calculates the percent likelihood of allergies or a cold.-->
-        var allergy_count = 0; <!--This variable counts the number of symptoms that point to allergies being the cause-->
-        var cold_count = 0; <!--This variable counts the number of symptoms that point to a cold being the cause-->
+        var allergy_count = 0; //This variable counts the number of symptoms that point to allergies being the cause
+        var cold_count = 0; //This variable counts the number of symptoms that point to a cold being the cause
 
 
         function allergyAdd(){ <!--This function counts the number of times a symptom implying allergies is selected-->
-            allergy_count = allergy_count + 1; <!--the function adds one for every allergy symptom-->
+            allergy_count = allergy_count + 1; //the function adds one for every allergy symptom
         }
 	
-        function coldAdd(){ <!--This function counts the number of times a symptom implying a cold is selected-->
-            cold_count = cold_count + 1; <!--the function adds one for every cold symptom-->
+        function coldAdd(){ <!--This function counts the number of times a symptom implying a cold is selected
+            cold_count = cold_count + 1; //the function adds one for every cold symptom
         }
 	
 	function results_display(){ <!--This function shows the results of what the symptoms imply-->
-		var resultText = document.getElementById("resultspage"); <!--this will return an element with a numeric value. This code also references the id in the code of the results page-->
-		var allergyPercent = 100*(allergy_count/(allergy_count+cold_count)); <!--this calculates the percent of symptoms that indicate allergies-->
-		var coldPercent = 100*(cold_count/(allergy_count+cold_count)); <!--this calculates the percent of symptoms that indicate a cold-->
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold =" + coldPercent + "%"; <!--this displays the results with the specified text and a percentage of the likelihood of allergies vs. cold-->
+		var resultText = document.getElementById("resultspage"); //this will return an element with a numeric value. This code also references the id in the code of the results page
+		var allergyPercent = 100*(allergy_count/(allergy_count+cold_count)); //this calculates the percent of symptoms that indicate allergies
+		var coldPercent = 100*(cold_count/(allergy_count+cold_count)); //this calculates the percent of symptoms that indicate a cold
+		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold =" + coldPercent + "%"; //this displays the results with the specified text and a percentage of the likelihood of allergies vs. cold
 	}
   </script>
 
