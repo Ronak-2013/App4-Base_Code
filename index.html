@@ -2,12 +2,12 @@
 <html> 
 <!-- The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.  Any user of this code does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.
  
-THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
+THIS CODE SHOULD NOT BE USED TO DETERMINE HOW EXTROVERTED OR INTROVERTED YOU ARE
  
  
 Authors in chronological order of contribution:
-Author 1
-Author 2
+Timothy Riedel
+Ronak Thomas
  
 Further Information:
 http://diystream.cns.utexas.edu/
@@ -17,14 +17,13 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+App to determine how introverted or extroverted someone in terms of a percentage
  
 Known Issues:
-blah, blah, blah, blah
 -->
 
   <head> <!--This code contains the title, style sheets, and makes it so that this code can both run as a mobile app and as a website.-->
-      <title>Hello World</title>  
+      <title>Are you an Introvert or an Extrovert?</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes"> <!--This is the part that makes it mobile app capable-->
       <link rel="stylesheet" href="w3.css">
@@ -32,24 +31,24 @@ blah, blah, blah, blah
    </head> 
 
 <!--JAVA CODE-->
-<script> <!--This code contains the functions and variables that tally up the allergy vs. cold symptoms. It also contains the math that calculates the percent likelihood of allergies or a cold.-->
-        var allergy_count = 0; //This variable counts the number of symptoms that point to allergies being the cause
-        var cold_count = 0; //This variable counts the number of symptoms that point to a cold being the cause
+<script> <!--This code contains the functions and variables that tally up the introvert vs. extrovert symptoms. It also contains the math that calculates the percent likelihood of being an introvert or an extrovert.-->
+        var introvert_count = 0; //This variable counts the number of qualities that point to being an introvert
+        var extrovert_count = 0; //This variable counts the number of qualities that point to being an extrovert
 
 
-        function allergyAdd(){ <!--This function counts the number of times a symptom implying allergies is selected-->
-            allergy_count = allergy_count + 1; //the function adds one for every allergy symptom
+        function introvertAdd(){ <!--This function counts the number of times a quality implying introversion is selected-->
+            introvert_count = introvert_count + 1; //the function adds one for every introvert quality
         }
 	
-        function coldAdd(){ <!--This function counts the number of times a symptom implying a cold is selected
-            cold_count = cold_count + 1; //the function adds one for every cold symptom
+        function extrovertAdd(){ <!--This function counts the number of times a quality implying extroversion is selected-->
+            extrovert_count = extrovert_count + 1; //the function adds one for every extrovert quality
         }
 	
-	function results_display(){ <!--This function shows the results of what the symptoms imply-->
+	function results_display(){ <!--This function shows the results of what the selected qualities imply-->
 		var resultText = document.getElementById("resultspage"); //this will return an element with a numeric value. This code also references the id in the code of the results page
-		var allergyPercent = 100*(allergy_count/(allergy_count+cold_count)); //this calculates the percent of symptoms that indicate allergies
-		var coldPercent = 100*(cold_count/(allergy_count+cold_count)); //this calculates the percent of symptoms that indicate a cold
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold =" + coldPercent + "%"; //this displays the results with the specified text and a percentage of the likelihood of allergies vs. cold
+		var introvertPercent = 100*(introvert_count/(introvert_count+extrovert_count)); //this calculates the percent of qualities that indicate introversion
+		var extrovertPercent = 100*(extrovert_count/(introvert_count+extrovert_count)); //this calculates the percent of qualities that indicate extroversion
+		resultText.innerHTML = "Percent of Introverted Qualities =" + introvertPercent + "%<br> Percent of Extroverted Qualities =" + extrovertPercent + "%"; //this displays the results with the specified text and a percentage of introverted vs. extroverted qualities
 	}
   </script>
 
